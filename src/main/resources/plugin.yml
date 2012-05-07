@@ -1,0 +1,83 @@
+name: MaxTPS
+main: cz.majncraft.maxtps.MaxTPS
+version: 2.0.0
+author: Karel Tuma <karel.tuma@gmail.com> & sd <sd@fucksheep.org>
+softdepend: [McGroovy, Orebfuscator]
+description: Provide maximum TPS by reducing critical resource usage
+commands:
+    lag:
+        permission: tps.lag
+        description: Display info about server lag
+        usage: /<command> - Display info about server lag
+    tps:
+        permission: tps.lag
+        description: Display info about server lag
+        usage: /<command> - Display info about server lag
+    viewdist:
+        permission: tps.viewdist
+        description: Force view distance
+        usage: /<command> 15 - set view-distance to 15 chunk radius
+    maxdist:
+        permission: tps.maxdist
+        description: Set maximum distance used
+        usage: /<command> 15 - set 15 as maximum view distance
+    mindist:
+        permission: tps.mindist
+        description: Set minimum distance used
+        usage: /<command> 15 - set 2 as minimum view distance
+    upinterval:
+        permission: tps.upinterval
+        description: View-distance upscaling interval
+        usage: /<command> 30 - try to increase view-distance every 30 seconds
+    downinterval:
+        permission: tps.downinterval
+        description: View-distance downscaling interval
+        usage: /<command> 300 - try to decrease view-distance every 5 minutes
+    chunklimit:
+        permission: tps.chunklimit
+        description: Set maximum number of chunks loaded (used for distance scaling)
+        usage: /chunklimit 15000 - set maximum to 15k chunks
+    mtreload:
+        permission: tps.mtreload
+        description: Reload config file
+        usage: /mtreload - reload MaxTPS config file
+    stacking:
+        permission: tps.stacking
+        description: Set item stacking radius
+        usage: /stacking 3 - items at most 3 blocks apart will stack
+    spawnerlimit:
+        permission: tps.spawnerlimit
+        description: Limit number of mobs per spawner
+        usage: /spawnerlimit 30 - limit to 30 mobs at any time
+    tpmonster:
+        permission: tps.tpmonster
+        description: Set ticks per monster spawn
+        usage: /tpmonster 1 - try to spawn 1 monster every tick (Default)
+    tpanimal:
+        permission: tps.tpanimal
+        description: Set ticks per animal spawn
+        usage: /tpanimal 400 - try to spawn 1 animal every 20 seconds (Default)
+    threshold:
+        permission: tps.threshold
+        description: Set TPS threshold for MaxTPS to start affecting view distance
+        usage: /threshold 18.5 - increase viewdist only if tps is above 18.5, decrease only if tps is below 18.5
+    vdist:
+        permission: tps.vdist
+        description: Set virtual (client-only) view distance
+        usage: /vdist 16 - Set virtual (client-only) view distance to 16
+    chunkgc:
+        permission: tps.chungc
+        description: Set chunk garbage collection interval
+        usage: /chunkgc 120 - Garbage-collect unused chunks every 2 minutes
+    chunkrate:
+        permission: tps.chunkrate
+        description: Set chunk sending rate
+        usage: /chunkrate 20 200 - Sends 20 packets/s normal, 200 during burst
+    oreditor:
+        permission: tps.oreditor
+        description: Toggle oreditor
+        usage: /oreditor 4 - set oreditor update radius (0 to disable)
+
+
+
+
